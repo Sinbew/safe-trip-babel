@@ -1,0 +1,12 @@
+// Utils
+@import './utils/vars';
+@import './utils/reset';
+@import './utils/visually-hidden';
+
+// GLobal
+@import './utils/base';
+
+@import './components/hero';
+@import './components/header';
+@import './components/social-list';
+@import './components/modal';

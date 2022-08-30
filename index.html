@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Citytrans</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;0,900;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <!-- Header -->
+
+    <header class="header">
+      <div class="container header-container">
+        <a class="logo" href="#">city<span>trans</span>.</a>
+        <nav class="header-nav">
+          <ul class="header-nav-list">
+            <li class="header-nav-item"><a href="#">Home</a></li>
+            <li class="header-nav-item"><a href="#">Transport</a></li>
+            <li class="header-nav-item"><a href="#">Bus Stop</a></li>
+            <li class="header-nav-item"><a href="#">Route</a></li>
+            <li class="header-nav-item"><a href="#">About Us</a></li>
+          </ul>
+        </nav>
+        <svg class="burger" width="40" height="31">
+          <use href="./images/symbol-defs.svg#icon-burger-menu"></use>
+        </svg>
+      </div>
+    </header>
+
+    <!-- Main -->
+
+    <main>
+      <section class="hero-section">
+        <div class="container hero-wrapper">
+          <div class="hero-container">
+            <h1 class="hero-title">ENJOY A SAFE TRIP</h1>
+            <p class="hero-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce iaculis vitae nulla
+              quis egestas. Mauris eros diam, rutrum
+            </p>
+            <button class="hero-button" type="button">READ MORE</button>
+          </div>
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <svg width="22" height="22" class="social-icon">
+                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <svg width="22" height="22" class="social-icon">
+                  <use href="./images/symbol-defs.svg#icon-whatsapp"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <svg width="22" height="22" class="social-icon">
+                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <svg width="22" height="22" class="social-icon">
+                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="backdrop is-hidden">
+        <div class="modal">
+          <div class="modal-head">
+            <img src="./images/modal-mail-icon.png" alt="mail-icon" />
+            <svg class="close-icon" width="23" height="23">
+              <use href="./images/symbol-defs.svg#icon-close"></use>
+            </svg>
+          </div>
+          <div class="modal-inner">
+            <label>Max words count<input class="input" type="number" /></label>
+            <label
+              >Type your text<textarea
+                pattern="[a-zA-Z]*"
+                class="textarea"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </label>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/dist/modal.js" type="module"></script>
+    <script src="./js/dist/modal-control.js" type="module"></script>
+  </body>
+</html>
