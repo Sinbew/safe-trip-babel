@@ -356,17 +356,14 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 14px;
+  color: var(--main-blue);
 }
 
 .modal label input,
 .modal label textarea {
   padding: 10px 5px 10px 10px;
-}
-
-.modal label input,
-.modal label textarea {
   margin-top: 5px;
-  border: 1px solid #777777;
+  border: 1px solid var(--main-blue);
   border-radius: 2px;
 }
 
@@ -379,4 +376,9 @@ body {
 
 .textarea {
   resize: none;
+}
+
+.counter {
+  display: flex;
+  justify-content: end;
 }/*# sourceMappingURL=main.css.map */

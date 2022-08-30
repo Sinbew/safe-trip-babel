@@ -3,6 +3,7 @@ class WordCounter {
     this.words = words;
     this.limit = limit;
     this.counter = 0;
+    this.currentWords = 0;
   }
 
   countWords() {
@@ -18,10 +19,23 @@ class WordCounter {
 
   setWords(words) {
     this.words = words;
+    this.setCurrentWords();
+  }
+
+  getLimit() {
+    return this.limit;
   }
 
   setLimit(limit) {
     this.limit = limit;
+  }
+
+  setCurrentWords() {
+    this.currentWords = this.words.trim().split(' ').length;
+  }
+
+  getCurrentWords() {
+    return this.currentWords;
   }
 }
 
@@ -29,6 +43,7 @@ const cutter = new WordCounter('', 0);
 
 const input = document.querySelector('.input');
 const textArea = document.querySelector('.textarea');
+const limitInfo = document.querySelector('.counter');
 
 input.addEventListener('input', handlerInput);
 
@@ -43,6 +58,7 @@ function handlerInput(evt) {
     cutter.countWords();
     textArea.value = cutter.getCuttedWords();
   }
+  setLimitInfo();
 }
 
 textArea.addEventListener('input', textAreaInput);
@@ -51,6 +67,7 @@ function textAreaInput(evt) {
   cutter.setWords(evt.target.value);
   cutter.countWords();
   evt.target.value = cutter.getCuttedWords();
+  setLimitInfo();
 }
 
 textArea.addEventListener('keypress', onlyLetters);
@@ -64,6 +81,12 @@ function onlyLetters(evt) {
   } else {
     evt.preventDefault();
   }
+}
+
+function setLimitInfo() {
+  limitInfo.textContent = `${cutter.getCurrentWords() ? cutter.getCurrentWords() : '0'} / ${
+    cutter.getLimit() ? cutter.getLimit() : '0'
+  }`;
 }
 
 // const input = document.querySelector('.input');
