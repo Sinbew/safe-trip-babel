@@ -46,7 +46,13 @@ var WordCounter = function () {
   }, {
     key: 'setCurrentWords',
     value: function setCurrentWords() {
-      this.currentWords = this.words.trim().split(' ').length;
+      if (this.words.trim().split(' ')[0] === '') {
+        this.currentWords = 0;
+      } else {
+        this.currentWords = this.words.trim().split(' ').length - this.words.split(' ').filter(function (el) {
+          return el === 'a' || el === 'an' || el === 'the';
+        }).length;
+      }
     }
   }, {
     key: 'getCurrentWords',

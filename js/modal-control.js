@@ -31,7 +31,13 @@ class WordCounter {
   }
 
   setCurrentWords() {
-    this.currentWords = this.words.trim().split(' ').length;
+    if (this.words.trim().split(' ')[0] === '') {
+      this.currentWords = 0;
+    } else {
+      this.currentWords =
+        this.words.trim().split(' ').length -
+        this.words.split(' ').filter(el => el === 'a' || el === 'an' || el === 'the').length;
+    }
   }
 
   getCurrentWords() {
